@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>Keras.NET</PackageId>
+    <PackageId>Keras.NET_Test</PackageId>
     <Version>3.7.4.3</Version>
     <Authors>SciSharp Team</Authors>
     <Product>Keras.NET</Product>
@@ -17,8 +17,9 @@
     <AssemblyName>Keras</AssemblyName>
     <RootNamespace>Keras</RootNamespace>
     <Configurations>Debug;Release;Py3.6_WIN;Py2.7_WIN;Py3.6_OSX;Py2.7_Mono;Py3.6_Mono;Py2.7_OSX</Configurations>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Platforms>AnyCPU;x64</Platforms>
+    <PackageVersion>3.7.4.3-alpha.200</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

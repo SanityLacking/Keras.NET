@@ -66,13 +66,14 @@ namespace Keras
         }
     }
 
-    public class KerasIterator : object
+    public class KerasIterator : object  
     {
         /// <summary>
         /// The py object which is the base variable
         /// </summary>
         public PyObject PyObject;
 
+        public PyIter PyIter;
         /// <summary>
         /// Initializes a new instance of the <see cref="StringOrInstance"/> class.
         /// </summary>
@@ -80,7 +81,11 @@ namespace Keras
         public KerasIterator(PyObject obj)
         {
             PyObject = obj;
+            PyIter = new PyIter(PyObject);
         }
+        
+        
+         
     }
 
     public class DirectoryIterator : object

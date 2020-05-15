@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Keras.Layers;
 
 namespace Keras.Models
 {
@@ -461,6 +462,32 @@ namespace Keras.Models
         public void SaveTensorflowJSFormat(string artifacts_dir, bool quantize = false)
         {
             Instance.tfjs.converters.save_keras_model(model: this.PyInstance, artifacts_dir: artifacts_dir);
+        }
+
+
+        /// <summary>
+        /// returns a list of all the layers within the model.
+        /// </summary>
+        public PyObject Layers()
+        {
+            var args = new Dictionary<string, object>();
+            var result = PyInstance.layers;
+            
+            var response = new List<PyObject>();
+            response.Add(result);
+            return result;
+        }
+        /// <summary>
+        /// returns a list of all the layers within the model.
+        /// </summary>
+        public PyObject Layers(int layerNum)
+        {
+            var args = new Dictionary<string, object>();
+            var result = PyInstance.layers[layerNum];
+            
+            var response = new List<PyObject>();
+            response.Add(result);
+            return result;
         }
     }
 }

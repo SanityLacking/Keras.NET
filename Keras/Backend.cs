@@ -27,6 +27,32 @@ namespace Keras
             return caller.backend().ToString();
         }
 
+        public static PyObject ones() {
+            try {
+                PyObject result = caller.ones(new List<int>() {1, 250, 250, 3});
+                
+                return result;
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static dynamic Function(dynamic input, dynamic output) {
+            try {
+                dynamic result = caller.function(input.input, output.get_output_at(0));
+                
+                return result;
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
         /// <summary>
         /// Returns the value of the fuzz factor used in numeric expressions.
         /// </summary>

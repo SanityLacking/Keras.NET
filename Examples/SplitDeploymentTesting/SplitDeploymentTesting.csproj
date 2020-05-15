@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Keras\Keras.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.1.0" />
+      <PackageReference Include="TensorFlow.NET" Version="0.15.1" />
+    </ItemGroup>
+
+</Project>
